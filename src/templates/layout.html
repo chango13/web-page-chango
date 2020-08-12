@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/title-icon.png') }}">
+    <title>Chango-desarrollo web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/CSS/main.css') }}">
+    
+</head>
+<body>
+  <div class="pop-side">
+    <div class="items" >
+      <a href="/"><h3 class="text" >Inicio</h3></a>
+      <a href="/vision"><h3 class="text" >Visión</h3></a>
+      <a href="/contacto"><h3 class="text" >Contacto</h3></a>
+    </div>
+    <div class="hamburger-box" onclick="change(this)">
+      <div class="hamburger-inner1"></div>
+      <div class="hamburger-inner2"></div>
+      <div class="hamburger-inner3"></div>
+    </div>
+  </div>
+    <div class="menu">
+      <a href="/"><button type="button" class="btn btn-outline-secondary">Inicio</button></a>
+      <a href="/vision"><button type="button" class="btn btn-outline-secondary">Visión</button></a>
+      <a href="/contacto"><button type="button" class="btn btn-outline-secondary">Contacto</button></a>
+    </div>
+
+   <script src="/static/scripts/script.js"></script>
+   {% block content %}
+    {% endblock %}
+</body>
+</html>
